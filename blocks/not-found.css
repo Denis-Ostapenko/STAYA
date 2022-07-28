@@ -1,0 +1,49 @@
+.not-found {
+  padding-top: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.not-found h2 {
+  margin-bottom: 60px;
+  font-family: "PP Monument Extended";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 50px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #cef564;
+  -webkit-text-stroke: 1px #000000;
+}
+.not-found__title-pink {
+  color: #e969a0;
+}
+.not-found h2 img {
+  position: absolute;
+  top: 205px;
+}
+.not-found h1 {
+  display: flex;
+  align-items: baseline;
+  font-family: "PP Monument Extended";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 200px;
+  line-height: 167px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 50px;
+}
+.not-found p {
+  font-family: "PP Monument Extended";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 50px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+}

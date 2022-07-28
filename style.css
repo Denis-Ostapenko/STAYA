@@ -9,6 +9,7 @@
 @import "./blocks/rewiews.css";
 @import "./blocks/faq.css";
 @import "./blocks/footer.css";
+@import "./blocks/not-found.css";
 
 @font-face {
   font-family: "PP Monument Extended";
