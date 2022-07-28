@@ -1,0 +1,75 @@
+.header {
+  position: fixed;
+  z-index: 100;
+  background: inherit;
+  width: 100%;
+}
+.header__container {
+  width: 1200px;
+  display: flex;
+  height: 105px;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.header__logo {
+  width: 20%;
+}
+.header__nav {
+  display: flex;
+  justify-content: center;
+}
+.header__nav a {
+  font-family: "Circular Std";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  margin-right: 35px;
+  background: none;
+  border: none;
+  color: #ffffff;
+  text-transform: uppercase;
+  padding: 0;
+  text-decoration: none;
+}
+.header__nav a:last-child {
+  margin-right: 0;
+}
+.header__nav a:hover {
+  opacity: 0.8;
+}
+.header__buy {
+  width: 20%;
+}
+.header__buy a {
+  display: block;
+  margin-left: auto;
+  width: 175px;
+  height: 45px;
+  font-family: "PP Monument Extended";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 20px;
+  text-transform: uppercase;
+  background: #cef564;
+  border-radius: 25px;
+  border: 4px solid #cef564;
+  color: #6c2df8;
+  padding: 3px 0 0 0;
+  box-shadow: 5px 8px 0 0 #333333;
+  transition-duration: 500ms;
+  transition-property: color, background;
+  margin-right: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+.header__buy a:hover {
+  background: none;
+  color: #cef564;
+}

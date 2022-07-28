@@ -1,0 +1,93 @@
+.technology__title {
+  font-family: "PP Monument Extended";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 28px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 50px;
+  text-align: center;
+  opacity: 0;
+}
+.technology__title.animation {
+  animation-name: appearance;
+  animation-delay: 300ms;
+  animation-timing-function: ease-out;
+  animation-duration: 400ms;
+  animation-fill-mode: forwards;
+}
+.technology__text {
+  max-width: 876px;
+  font-family: "Circular Std";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 135%;
+  text-align: center;
+  color: #ffffff;
+  margin: 0 auto 30px;
+  opacity: 0;
+}
+.technology__text.animation {
+  animation-name: appearance;
+  animation-delay: 300ms;
+  animation-timing-function: ease-out;
+  animation-duration: 400ms;
+  animation-fill-mode: forwards;
+}
+.technology__button {
+  width: 274px;
+  height: 55px;
+  font-family: "PP Monument Extended";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 20px;
+  text-transform: uppercase;
+  background: #cef564;
+  border-radius: 25px;
+  padding-top: 3px;
+  color: #6c2df8;
+  border: none;
+  margin: auto;
+  box-shadow: 8px 8px 0 0 #333333;
+  transition-duration: 500ms;
+  transition-property: color, background;
+  opacity: 0;
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.technology__button.animation {
+  animation-name: appearance;
+  animation-delay: 300ms;
+  animation-timing-function: ease-out;
+  animation-duration: 400ms;
+  animation-fill-mode: forwards;
+}
+.technology__button:hover {
+  background: none;
+  color: #cef564;
+  border: 4px solid #cef564;
+}
+.technology__text--green {
+  font-family: "PP Monument Extended";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 20px;
+  color: #cef564;
+  -webkit-text-stroke: 1px #000000;
+}
+.technology__text--pink {
+  font-family: "PP Monument Extended";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 20px;
+  color: #e969a0;
+  -webkit-text-stroke: 1px #000000;
+}

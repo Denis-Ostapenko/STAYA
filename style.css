@@ -1,0 +1,71 @@
+@import "./reset.css";
+@import "./blocks/header.css";
+@import "./blocks/main.css";
+@import "./blocks/cover.css";
+@import "./blocks/about.css";
+@import "./blocks/works.css";
+@import "./blocks/technology.css";
+@import "./blocks/catalog.css";
+@import "./blocks/rewiews.css";
+@import "./blocks/faq.css";
+@import "./blocks/footer.css";
+
+@font-face {
+  font-family: "PP Monument Extended";
+  src: url("./fonts/PPMonumentExtended/PPMonumentExtended-Black.otf") format("opentype");
+  font-weight: 900;
+}
+@font-face {
+  font-family: "Circular Std";
+  src: url("/fonts/CircularStd/CircularStd-Black/CircularStd-Black.eot");
+  src: url("./fonts/CircularStd/CircularStd-Black/CircularStd-Black.woff") format("woff"),
+    url("./fonts/CircularStd/CircularStd-Black/CircularStd-Black.woff2") format("woff2"),
+    url("./fonts/CircularStd/CircularStd-Black/CircularStd-Black.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 900;
+}
+@font-face {
+  font-family: "Circular Std";
+  src: url("./fonts/CircularStd/CircularStd-Book/CircularStd-Book.eot");
+  src: url("./fonts/CircularStd/CircularStd-Book/CircularStd-Book.woff") format("woff"),
+    url("./fonts/CircularStd/CircularStd-Book/CircularStd-Book.woff2") format("woff2"),
+    url("./fonts/CircularStd/CircularStd-Book/CircularStd-Book.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 450;
+}
+@font-face {
+  font-family: "Circular Std";
+  src: url("./fonts/CircularStd/CircularStd-Bold/CircularStd-Bold.eot");
+  src: url("./fonts/CircularStd/CircularStd-Bold/CircularStd-Bold.woff") format("woff"),
+    url("./fonts/CircularStd/CircularStd-Bold/CircularStd-Bold.woff2") format("woff2"),
+    url("./fonts/CircularStd/CircularStd-Bold/CircularStd-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+}
+@keyframes appearance {
+  from {
+    transform: translate3d(0px, 48px, 0px);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.5;
+  }
+  to {
+    transform: translate3d(0px, 0px, 0px);
+    opacity: 1;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #6c2df8;
+  padding: 0 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+}
+body > * {
+  width: 1200px;
+}

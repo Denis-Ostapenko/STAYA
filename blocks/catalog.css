@@ -1,0 +1,398 @@
+@keyframes catalogItemOpacityLeft {
+  from {
+    opacity: 0;
+    transform: translateX(150px);
+    position: relative;
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+    position: relative;
+  }
+}
+@keyframes catalogItemOpacityRight {
+  from {
+    opacity: 0;
+    transform: translateX(-150px);
+    position: relative;
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+    position: relative;
+  }
+}
+.catalog h2 {
+  font-family: "PP Monument Extended";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 28px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 50px;
+  opacity: 0;
+}
+.catalog h2.animation {
+  animation-name: appearance;
+  animation-delay: 300ms;
+  animation-timing-function: ease-out;
+  animation-duration: 400ms;
+  animation-fill-mode: forwards;
+}
+.catalog__trackers {
+  width: 100%;
+  position: relative;
+  margin-bottom: 25px;
+}
+.trackers__list {
+  display: flex;
+  opacity: 0;
+}
+.trackers__list.animation {
+  opacity: 1;
+}
+.trackers__list.animation + .trackers__info {
+  animation-name: appearance;
+  animation-delay: 300ms;
+  animation-timing-function: ease-out;
+  animation-duration: 400ms;
+  animation-fill-mode: forwards;
+}
+.trackers__item {
+  width: 282px;
+  height: 360px;
+  background: #ffffff;
+  border-radius: 25px;
+  display: none;
+  padding: 17px;
+  margin-right: 24px;
+  position: relative;
+}
+.catalog__hit-container {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+}
+.catalog__hit-container .catalog__hit-image {
+  width: 100px;
+  height: 86.92px;
+  margin: 0;
+  filter: drop-shadow(7px 4px 0px #333333);
+}
+.catalog__hit-container h4 {
+  position: absolute;
+  font-family: "PP Monument Extended";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: #cef564;
+  transform: rotate(15deg);
+  top: 55px;
+  left: 23px;
+}
+.trackers__item:nth-child(3n) {
+  margin-right: 0;
+}
+.trackers__item--active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.trackers__item:first-child.trackers__item--active,
+.trackers__item:nth-child(2).trackers__item--active,
+.trackers__item:nth-child(3).trackers__item--active {
+  animation-name: catalogItemOpacityLeft;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+}
+.trackers__list.animation .trackers__item:last-child.trackers__item--active,
+.trackers__list.animation .trackers__item:nth-child(4).trackers__item--active,
+.trackers__list.animation .trackers__item:nth-child(5).trackers__item--active {
+  animation-name: catalogItemOpacityRight;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+}
+.trackers__item:first-child.trackers__item--active,
+.trackers__item:nth-child(4).trackers__item--active {
+  margin-right: 330px;
+}
+.trackers__item img {
+  width: 209px;
+  height: 209px;
+  margin-bottom: 24px;
+  margin-top: 8px;
+}
+.trackers__item-price {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.trackers__item-price h5 {
+  font-family: "Circular Std";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 120%;
+  text-transform: capitalize;
+  color: #e969a0;
+}
+.trackers__item-price span {
+  font-family: "PP Monument Extended";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: #e969a0;
+}
+.trackers__item button {
+  width: 100%;
+  height: 45px;
+  font-family: "PP Monument Extended";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+  background: #cef564;
+  border-radius: 25px;
+  padding-top: 3px;
+  color: #6c2df8;
+  display: block;
+  border: none;
+  margin-top: auto;
+  box-shadow: 4px 5px 0 0 #333333;
+  transition-duration: 500ms;
+  transition-property: color, background;
+}
+
+.trackers__item button:hover {
+  background: none;
+  color: #cef564;
+  border: 4px solid #cef564;
+}
+.trackers__info {
+  position: absolute;
+  width: 282px;
+  height: 360px;
+  display: flex;
+  flex-direction: column-reverse;
+  top: 0;
+  left: 306px;
+  opacity: 0;
+}
+.trackers__info-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.trackers__title {
+  font-family: "Circular Std";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 135%;
+  color: #ffffff;
+}
+.trackers__control-container {
+  border: 3px solid #cef564;
+  height: 31px;
+  border-radius: 28px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 108px;
+}
+.trackers__control {
+  height: 22px;
+  width: 24px;
+  transition: opacity 250ms;
+}
+.trackers__control.prev {
+  background: url("../img/arrow.svg") 100% 100% / cover no-repeat;
+}
+.trackers__control.next {
+  transform: rotate(180deg);
+  background: url("../img/arrow.svg") 100% 100% / cover no-repeat;
+}
+.trackers__control:hover {
+  opacity: 0.8;
+  transition: opacity 250ms;
+}
+.trackers__control.deactivate {
+  opacity: 0.5;
+  background: url("../img/arrow.svg") 100% 100% / cover no-repeat;
+  cursor: default;
+}
+.trackers__control.deactivate:hover {
+  opacity: 0.5;
+}
+.catalog__leashes {
+  width: 100%;
+  position: relative;
+}
+.leashes__list {
+  display: flex;
+  opacity: 0;
+}
+.leashes__list.animation {
+  opacity: 1;
+}
+.leashes__list.animation + .leashes__info {
+  animation-name: appearance;
+  animation-delay: 300ms;
+  animation-timing-function: ease-out;
+  animation-duration: 400ms;
+  animation-fill-mode: forwards;
+}
+.leashes__item {
+  width: 282px;
+  height: 360px;
+  background: #ffffff;
+  border-radius: 25px;
+  display: none;
+  padding: 17px;
+  margin-right: 24px;
+}
+.leashes__item:nth-child(3n) {
+  margin-right: 0;
+}
+.leashes__item--active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.leashes__list.animation .leashes__item:first-child.leashes__item--active,
+.leashes__list.animation .leashes__item:nth-child(2).leashes__item--active,
+.leashes__list.animation .leashes__item:nth-child(3).leashes__item--active {
+  animation-name: catalogItemOpacityLeft;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+}
+.leashes__item:last-child.leashes__item--active,
+.leashes__item:nth-child(4).leashes__item--active,
+.leashes__item:nth-child(5).leashes__item--active {
+  animation-name: catalogItemOpacityRight;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+}
+.leashes__item:nth-child(6).leashes__item--active,
+.leashes__item:nth-child(3).leashes__item--active {
+  margin-right: 306px;
+}
+.leashes__item img {
+  width: 209px;
+  height: 209px;
+  margin-bottom: 24px;
+  margin-top: 8px;
+}
+.leashes__item-price {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.leashes__item-price h5 {
+  font-family: "Circular Std";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 120%;
+  text-transform: capitalize;
+  color: #e969a0;
+}
+.leashes__item-price span {
+  font-family: "PP Monument Extended";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: #e969a0;
+}
+.leashes__item button {
+  width: 100%;
+  height: 45px;
+  font-family: "PP Monument Extended";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+  background: #cef564;
+  border-radius: 25px;
+  padding-top: 3px;
+  color: #6c2df8;
+  display: block;
+  border: none;
+  margin-top: auto;
+  box-shadow: 4px 5px 0 0 #333333;
+  transition-duration: 500ms;
+  transition-property: color, background;
+}
+
+.leashes__item button:hover {
+  background: none;
+  color: #cef564;
+  border: 4px solid #cef564;
+}
+.leashes__info {
+  position: absolute;
+  width: 282px;
+  height: 360px;
+  display: flex;
+  flex-direction: column-reverse;
+  top: 0;
+  right: 0;
+}
+.leashes__info-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.leashes__title {
+  font-family: "Circular Std";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 135%;
+  color: #ffffff;
+}
+.leashes__control-container {
+  border: 3px solid #cef564;
+  height: 31px;
+  border-radius: 28px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 108px;
+}
+.leashes__control {
+  height: 22px;
+  width: 24px;
+  transition: opacity 250ms;
+}
+.leashes__control.prev {
+  background: url("../img/arrow.svg") 100% 100% / cover no-repeat;
+}
+.leashes__control.next {
+  transform: rotate(180deg);
+  background: url("../img/arrow.svg") 100% 100% / cover no-repeat;
+}
+.leashes__control:hover {
+  opacity: 0.8;
+  transition: opacity 250ms;
+}
+.leashes__control.deactivate {
+  opacity: 0.5;
+  background: url("../img/arrow.svg") 100% 100% / cover no-repeat;
+  cursor: default;
+}
+.leashes__control.deactivate:hover {
+  opacity: 0.5;
+}

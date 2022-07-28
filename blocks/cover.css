@@ -1,0 +1,400 @@
+@keyframes imageOpacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes trackOpacity {
+  from {
+    opacity: 0;
+  }
+  99% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.сover__images-list {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+.сover__image {
+  width: 281px;
+  height: 372px;
+}
+.сover__image img {
+  width: 100%;
+  height: 100%;
+}
+.сover__button {
+  width: 274px;
+  height: 55px;
+  font-family: "PP Monument Extended";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 20px;
+  text-transform: uppercase;
+  background: #cef564;
+  border-radius: 25px;
+  padding-top: 3px;
+  color: #6c2df8;
+  border: none;
+  margin: auto;
+  box-shadow: 8px 8px 0 0 #333333;
+  animation-name: appearance;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  animation-delay: 2.2s;
+  animation-timing-function: ease-out;
+  animation-duration: 400ms;
+  transition-duration: 500ms;
+  transition-property: color, background;
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.сover__button:hover {
+  background: none;
+  color: #cef564;
+  border: 4px solid #cef564;
+}
+.сover__title {
+  font-family: "PP Monument Extended";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 46px;
+  line-height: 120%;
+  text-align: center;
+  padding: 0 100px;
+  color: #ffffff;
+  margin: 40px 0 25px;
+  animation-name: appearance;
+  animation-delay: 2s;
+  animation-timing-function: ease-out;
+  animation-duration: 400ms;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -750, 0, 1);
+}
+.сover__title span {
+  color: #e969a0;
+  -webkit-text-stroke: 2px #000000;
+}
+.сover__track-list {
+  width: 1200px;
+  height: 372px;
+  position: absolute;
+  top: 0;
+  display: flex;
+}
+.сover__images-list li:nth-child(1) {
+  animation-name: imageOpacity;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  opacity: 0;
+  animation-delay: 0.5s;
+  z-index: 50;
+}
+.сover__images-list li:nth-child(2) {
+  animation-name: imageOpacity;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  animation-duration: 1s;
+  z-index: 20;
+}
+.сover__images-list li:nth-child(3) {
+  animation-name: imageOpacity;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  opacity: 0;
+  animation-delay: 1.5s;
+  z-index: 50;
+}
+.сover__images-list li:nth-child(4) {
+  animation-name: imageOpacity;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  animation-delay: 1s;
+  animation-duration: 1s;
+  z-index: 20;
+}
+.сover__track-list li img {
+  position: absolute;
+  animation-name: trackOpacity;
+  animation-fill-mode: forwards;
+  z-index: 30;
+}
+.сover__track-list li:nth-child(1) img {
+  left: 10;
+  top: 65;
+  transform: rotate(44deg);
+  animation-duration: 50ms;
+}
+.сover__track-list li:nth-child(2) img {
+  left: 22px;
+  top: 28px;
+  transform: rotate(55deg);
+  animation-duration: 100ms;
+}
+.сover__track-list li:nth-child(3) img {
+  left: 59px;
+  top: 44px;
+  transform: rotate(81deg);
+  animation-duration: 150ms;
+}
+.сover__track-list li:nth-child(4) img {
+  left: 83px;
+  top: 11px;
+  transform: rotate(109deg);
+  animation-duration: 200ms;
+}
+.сover__track-list li:nth-child(5) img {
+  left: 102px;
+  top: 55px;
+  transform: rotate(128deg);
+  animation-duration: 250ms;
+}
+.сover__track-list li:nth-child(6) img {
+  left: 140px;
+  top: 33px;
+  transform: rotate(129deg);
+  animation-duration: 300ms;
+}
+.сover__track-list li:nth-child(7) img {
+  left: 141px;
+  top: 79px;
+  transform: rotate(145deg);
+  animation-duration: 350ms;
+}
+.сover__track-list li:nth-child(8) img {
+  left: 184px;
+  top: 71px;
+  transform: rotate(154deg);
+  animation-duration: 400ms;
+}
+.сover__track-list li:nth-child(9) img {
+  left: 172px;
+  top: 119px;
+  transform: rotate(171deg);
+  animation-duration: 450ms;
+}
+.сover__track-list li:nth-child(10) img {
+  left: 214px;
+  top: 130px;
+  transform: rotate(169deg);
+  animation-duration: 500ms;
+}
+.сover__track-list li:nth-child(11) img {
+  left: 195px;
+  top: 175px;
+  transform: rotate(158deg);
+  animation-duration: 550ms;
+}
+.сover__track-list li:nth-child(12) img {
+  left: 231px;
+  top: 189px;
+  transform: rotate(140deg);
+  animation-duration: 600ms;
+}
+.сover__track-list li:nth-child(13) img {
+  left: 220px;
+  top: 230px;
+  transform: rotate(120deg);
+  animation-duration: 650ms;
+}
+.сover__track-list li:nth-child(14) img {
+  left: 265;
+  top: 228;
+  transform: rotate(115.49deg);
+  animation-duration: 700ms;
+}
+.сover__track-list li:nth-child(15) img {
+  left: 280;
+  top: 264;
+  transform: rotate(125.17deg);
+  animation-duration: 750ms;
+}
+.сover__track-list li:nth-child(16) img {
+  left: 325;
+  top: 263;
+  transform: rotate(125.17deg);
+  animation-duration: 800ms;
+}
+.сover__track-list li:nth-child(17) img {
+  left: 344;
+  top: 296;
+  transform: rotate(117.11deg);
+  animation-duration: 850ms;
+}
+
+.сover__track-list li:nth-child(18) img {
+  left: 389;
+  top: 281;
+  transform: rotate(63.19deg);
+  animation-duration: 900ms;
+}
+.сover__track-list li:nth-child(19) img {
+  left: 429;
+  top: 291;
+  transform: rotate(72.87deg);
+  animation-duration: 950ms;
+}
+.сover__track-list li:nth-child(20) img {
+  left: 455;
+  top: 255;
+  transform: rotate(72.87deg);
+  animation-duration: 1000ms;
+}
+.сover__track-list li:nth-child(21) img {
+  left: 492;
+  top: 260;
+  transform: rotate(64.81deg);
+  animation-duration: 1050ms;
+}
+.сover__track-list li:nth-child(22) img {
+  left: 496;
+  top: 209;
+  transform: rotate(43.85deg);
+  animation-duration: 1100ms;
+}
+.сover__track-list li:nth-child(23) img {
+  left: 535;
+  top: 205;
+  transform: rotate(53.53deg);
+  animation-duration: 1150ms;
+}
+.сover__track-list li:nth-child(24) img {
+  left: 548;
+  top: 162;
+  transform: rotate(53.53deg);
+  animation-duration: 1200ms;
+}
+.сover__track-list li:nth-child(25) img {
+  left: 585;
+  top: 155;
+  transform: rotate(45.47deg);
+  animation-duration: 1250ms;
+}
+.сover__track-list li:nth-child(26) img {
+  left: 593;
+  top: 107;
+  transform: rotate(45.47deg);
+  animation-duration: 1300ms;
+}
+
+.сover__track-list li:nth-child(27) img {
+  left: 632;
+  top: 117;
+  transform: rotate(45.47deg);
+  animation-duration: 1350ms;
+}
+.сover__track-list li:nth-child(28) img {
+  left: 632;
+  top: 70;
+  transform: rotate(44deg);
+  animation-duration: 1400ms;
+}
+.сover__track-list li:nth-child(29) img {
+  left: 672;
+  top: 80;
+  transform: rotate(41deg);
+  animation-duration: 1450ms;
+}
+.сover__track-list li:nth-child(30) img {
+  left: 679;
+  top: 33;
+  transform: rotate(56deg);
+  animation-duration: 1500ms;
+}
+.сover__track-list li:nth-child(31) img {
+  left: 721;
+  top: 45;
+  transform: rotate(54deg);
+  animation-duration: 1550ms;
+}
+.сover__track-list li:nth-child(32) img {
+  left: 741;
+  top: 2;
+  transform: rotate(66deg);
+  animation-duration: 1600ms;
+}
+.сover__track-list li:nth-child(33) img {
+  left: 778;
+  top: 32;
+  transform: rotate(87deg);
+  animation-duration: 1650ms;
+}
+.сover__track-list li:nth-child(34) img {
+  left: 817;
+  top: 0;
+  transform: rotate(100deg);
+  animation-duration: 1700ms;
+}
+.сover__track-list li:nth-child(35) img {
+  left: 839;
+  top: 38;
+  transform: rotate(95deg);
+  animation-duration: 1750ms;
+}
+
+.сover__track-list li:nth-child(36) img {
+  left: 882;
+  top: 13;
+  transform: rotate(109.45deg);
+  animation-duration: 1800ms;
+}
+.сover__track-list li:nth-child(37) img {
+  left: 901;
+  top: 45;
+  transform: rotate(119.13deg);
+  animation-duration: 1850ms;
+}
+.сover__track-list li:nth-child(38) img {
+  left: 945;
+  top: 40;
+  transform: rotate(119.13deg);
+  animation-duration: 1900ms;
+}
+.сover__track-list li:nth-child(39) img {
+  left: 968;
+  top: 72;
+  transform: rotate(111.07deg);
+  animation-duration: 1950ms;
+}
+.сover__track-list li:nth-child(40) img {
+  left: 1008;
+  top: 43;
+  transform: rotate(69.28deg);
+  animation-duration: 2000ms;
+}
+.сover__track-list li:nth-child(41) img {
+  left: 1047;
+  top: 57;
+  transform: rotate(78.96deg);
+  animation-duration: 2050ms;
+}
+.сover__track-list li:nth-child(42) img {
+  left: 1077;
+  top: 24;
+  transform: rotate(78.96deg);
+  animation-duration: 2100ms;
+}
+.сover__track-list li:nth-child(43) img {
+  left: 1112;
+  top: 33;
+  transform: rotate(70.9deg);
+  animation-duration: 2150ms;
+}
+.сover__track-list li:nth-child(44) img {
+  left: 1154;
+  top: 51;
+  transform: rotate(125.17deg);
+  animation-duration: 2200ms;
+}

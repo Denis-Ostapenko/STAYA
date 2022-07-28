@@ -1,0 +1,156 @@
+@keyframes answerOpacity {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+.faq__title {
+  font-family: "PP Monument Extended";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 28px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 50px;
+  opacity: 0;
+}
+.faq__title.animation {
+  animation-name: appearance;
+  animation-delay: 300ms;
+  animation-timing-function: ease-out;
+  animation-duration: 400ms;
+  animation-fill-mode: forwards;
+}
+.faq__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.faq__item {
+  border-top: 1px solid rgb(233 105 160 / 60%);
+  padding-top: 25px;
+  width: 306px;
+  padding-right: 25px;
+  height: 269px;
+  margin-bottom: 25px;
+}
+.faq__item:first-child.animation .faq__question {
+  animation-name: appearance;
+  animation-delay: 300ms;
+  animation-timing-function: ease-out;
+  animation-duration: 400ms;
+  animation-fill-mode: forwards;
+}
+.faq__item:nth-child(2).animation .faq__question {
+  animation-name: appearance;
+  animation-delay: 350ms;
+  animation-timing-function: ease-out;
+  animation-duration: 400ms;
+  animation-fill-mode: forwards;
+}
+.faq__item:nth-child(3).animation .faq__question {
+  animation-name: appearance;
+  animation-delay: 400ms;
+  animation-timing-function: ease-out;
+  animation-duration: 400ms;
+  animation-fill-mode: forwards;
+}
+.faq__item:nth-child(4).animation .faq__question {
+  animation-name: appearance;
+  animation-delay: 450ms;
+  animation-timing-function: ease-out;
+  animation-duration: 400ms;
+  animation-fill-mode: forwards;
+}
+.faq__item:last-child.animation .faq__question {
+  animation-name: appearance;
+  animation-delay: 450ms;
+  animation-timing-function: ease-out;
+  animation-duration: 400ms;
+  animation-fill-mode: forwards;
+}
+.faq__item:nth-child(5).animation .faq__question {
+  animation-name: appearance;
+  animation-delay: 300ms;
+  animation-timing-function: ease-out;
+  animation-duration: 400ms;
+  animation-fill-mode: forwards;
+}
+.faq__item:nth-child(6).animation .faq__question {
+  animation-name: appearance;
+  animation-delay: 350ms;
+  animation-timing-function: ease-out;
+  animation-duration: 400ms;
+  animation-fill-mode: forwards;
+}
+.faq__item:nth-child(7).animation .faq__question {
+  animation-name: appearance;
+  animation-delay: 400ms;
+  animation-timing-function: ease-out;
+  animation-duration: 400ms;
+  animation-fill-mode: forwards;
+}
+.faq__item:nth-child(4),
+.faq__item:last-child {
+  padding-right: 0px;
+  width: 281px;
+}
+.faq__question {
+  display: flex;
+  font-family: "PP Monument Extended";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 22px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 15px;
+  min-height: 68px;
+  opacity: 0;
+}
+.faq__question:hover .faq__question--green {
+  color: #cef564;
+  -webkit-text-stroke: 0.5px #000000;
+  transition-duration: 500ms;
+  transition-property: color;
+}
+.faq__question:hover .faq__question--pink {
+  color: #e969a0;
+  -webkit-text-stroke: 0.5px #000000;
+  transition-duration: 500ms;
+  transition-property: color;
+}
+.faq__question:hover {
+  color: #ffffff;
+  transition-duration: 500ms;
+  transition-property: color;
+}
+.faq__question-count {
+  display: block;
+  font-family: "Circular Std";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 20px;
+  margin-right: 22px;
+}
+.faq__answer {
+  font-family: "Circular Std";
+  font-style: normal;
+  font-weight: 450;
+  font-size: 18px;
+  line-height: 130%;
+  color: #ffffff;
+  opacity: 0;
+  display: none;
+}
+.faq__question:hover + .faq__answer {
+  display: block;
+  animation-name: answerOpacity;
+  animation-fill-mode: forwards;
+  animation-duration: 500ms;
+}

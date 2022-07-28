@@ -1,0 +1,148 @@
+@keyframes contentOpacity {
+  from {
+    opacity: 0;
+    transform: translateX(300px);
+    position: relative;
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+    position: relative;
+  }
+}
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.about__tabs {
+  display: flex;
+  padding: 10px;
+  width: 703px;
+  border: 2px solid #ffffff;
+  border-radius: 35px;
+  align-items: center;
+  margin-bottom: 50px;
+  justify-content: space-around;
+  opacity: 0;
+}
+.about__tabs.animation {
+  animation-name: appearance;
+  animation-timing-function: ease-out;
+  animation-delay: 300ms;
+  animation-duration: 400ms;
+  animation-fill-mode: forwards;
+}
+.about__tabs-item button {
+  background: none;
+  font-family: "Circular Std";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 22px;
+  margin: 0px;
+  line-height: 120%;
+  color: #ffffff;
+  border: none;
+  padding: 0;
+  transition-duration: 500ms;
+  transition-property: margin, background;
+}
+.about__tabs-item--active button {
+  background: #e969a0;
+  border-radius: 25px;
+  width: 157px;
+  height: 45px;
+  box-shadow: 4px 4px 0 0 #333333;
+  cursor: default;
+  transition-duration: 500ms;
+  transition-property: width, margin, background;
+}
+.about__content {
+  display: none;
+  z-index: 10;
+}
+.about__track {
+  position: absolute;
+  bottom: 0;
+  left: 900px;
+  transform: rotate(38deg);
+  opacity: 0.15;
+}
+.about__content:first-child {
+  opacity: 0;
+  animation: none;
+}
+.about__content.animation {
+  animation-name: contentOpacity;
+  animation-fill-mode: forwards;
+  animation-duration: 1.5s;
+}
+.about__content--active {
+  width: 100%;
+  height: auto;
+  display: flex;
+  opacity: 0;
+  animation-name: contentOpacity;
+  animation-fill-mode: forwards;
+  animation-duration: 1.5s;
+}
+.about__content-image {
+  width: 587px;
+  height: 483px;
+}
+
+.about__content-text {
+  width: 50%;
+  margin-left: 25px;
+  color: white;
+}
+.about__content-text h3 {
+  font-family: "PP Monument Extended";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 120%;
+  padding-right: 150px;
+  margin-bottom: 20px;
+}
+.about__content-text--pink {
+  color: #e969a0;
+  -webkit-text-stroke: 1px #000000;
+}
+.about__content-text--green {
+  color: #cef564;
+  -webkit-text-stroke: 1px #000000;
+}
+.about__content-text p {
+  font-family: "Circular Std";
+  font-style: normal;
+  font-weight: 450;
+  font-size: 18px;
+  line-height: 135%;
+  margin-bottom: 20px;
+}
+.about__content-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 14px;
+  font-family: "Circular Std";
+  font-style: normal;
+  font-weight: 450;
+  font-size: 18px;
+  line-height: 20px;
+}
+.about__content-list li::before {
+  content: "";
+  display: block;
+  background-image: url("../img/track-green.svg");
+  width: 22px;
+  height: 20px;
+  margin-right: 8px;
+}
+.about__content-list li:nth-child(2n):before {
+  transform: rotate(-15deg);
+}
+.about__content-list li:nth-child(2n-1):before {
+  transform: rotate(15deg);
+}

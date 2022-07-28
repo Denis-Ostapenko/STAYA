@@ -1,0 +1,123 @@
+.rewiews__title {
+  font-family: "PP Monument Extended";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 28px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 50px;
+  opacity: 0;
+}
+.rewiews__title.animation {
+  animation-name: appearance;
+  animation-delay: 300ms;
+  animation-timing-function: ease-out;
+  animation-duration: 400ms;
+  animation-fill-mode: forwards;
+}
+.rewiews__rating {
+  width: 306px;
+  opacity: 0;
+}
+.rewiews__image {
+  width: 306px;
+  display: flex;
+  opacity: 0;
+}
+.rewiews__image img {
+  width: 128px;
+  height: 128px;
+}
+.rewiews__item.animation .rewiews__rating {
+  animation-name: appearance;
+  animation-delay: 300ms;
+  animation-timing-function: ease-out;
+  animation-duration: 400ms;
+  animation-fill-mode: forwards;
+}
+.rewiews__item.animation .rewiews__image {
+  animation-name: appearance;
+  animation-delay: 500ms;
+  animation-timing-function: ease-out;
+  animation-duration: 400ms;
+  animation-fill-mode: forwards;
+}
+.rewiews__item.animation .rewiews__body {
+  animation-name: appearance;
+  animation-delay: 400ms;
+  animation-timing-function: ease-out;
+  animation-duration: 400ms;
+  animation-fill-mode: forwards;
+}
+.rewiews__item:first-child .rewiews__image img,
+.rewiews__item:last-child .rewiews__image img {
+  filter: drop-shadow(4px 4px 0px #333333);
+  margin-left: auto;
+}
+.rewiews__item:nth-child(2) .rewiews__image img {
+  filter: drop-shadow(-4px 4px 0px #333333);
+  margin-left: 20px;
+  align-self: center;
+}
+.rewiews__item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 42px;
+}
+.rewiews__item:last-child {
+  margin-bottom: 0px;
+}
+.rewiews__list {
+  display: flex;
+  flex-direction: column;
+}
+.rewiews__star-list {
+  display: flex;
+  margin-bottom: 15px;
+}
+.rewiews__star-item {
+  margin-right: 2px;
+}
+.rewiews__star-item:last-child {
+  margin-right: 0px;
+}
+.rewiews__rating-author {
+  font-family: "PP Monument Extended";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+}
+.rewiews__rating-date {
+  font-family: "Circular Std";
+  font-style: normal;
+  font-weight: 450;
+  font-size: 18px;
+  line-height: 135%;
+  color: rgba(255, 255, 255, 0.7);
+}
+.rewiews__body {
+  width: 588px;
+  opacity: 0;
+}
+.rewiews__body-title {
+  font-family: "PP Monument Extended";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+.rewiews__body-text {
+  font-family: "Circular Std";
+  font-style: normal;
+  font-weight: 450;
+  font-size: 18px;
+  line-height: 135%;
+  color: #ffffff;
+}

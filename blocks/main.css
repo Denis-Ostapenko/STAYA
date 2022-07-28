@@ -1,0 +1,20 @@
+.main__сover {
+  margin-top: 105px;
+  position: relative;
+}
+.main__about {
+  padding-top: 125px;
+}
+.main__works {
+  padding-top: 140px;
+}
+.main__catalog {
+  padding-top: 130px;
+}
+.main__rewiews {
+  padding-top: 140px;
+  padding-bottom: 140px;
+}
+.main__faq {
+  padding-bottom: 40px;
+}
