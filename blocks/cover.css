@@ -398,3 +398,29 @@
   transform: rotate(125.17deg);
   animation-duration: 2200ms;
 }
+@media screen and (max-width: 1200px) and (min-width: 640px) {
+  .сover__image:first-child,
+  .сover__image:last-child {
+    display: none;
+  }
+  .сover__track-list li:nth-child(n + 26) {
+    display: none;
+  }
+  .сover__track-list {
+    width: 100%;
+  }
+  .сover__images-list li:nth-child(3) {
+    z-index: 0;
+    animation-delay: 0s;
+  }
+  .сover__title {
+    margin: 30px 0 20px;
+    padding: 0;
+    font-size: 36px;
+    line-height: 120%;
+  }
+  .сover__button {
+    width: 254px;
+    height: 45px;
+  }
+}

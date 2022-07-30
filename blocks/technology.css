@@ -91,3 +91,22 @@
   color: #e969a0;
   -webkit-text-stroke: 1px #000000;
 }
+@media screen and (max-width: 1200px) and (min-width: 640px) {
+  .technology__text {
+    font-size: 18px;
+    line-height: 135%;
+    margin: 0 auto 25px;
+  }
+  .technology__text--pink {
+    font-size: 18px;
+    line-height: 135%;
+  }
+  .technology__text--green {
+    font-size: 18px;
+    line-height: 135%;
+  }
+  .technology__button {
+    height: 45px;
+    width: 253px;
+  }
+}

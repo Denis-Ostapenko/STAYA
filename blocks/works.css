@@ -30,6 +30,38 @@
     transform: translateY(0px) rotate(0deg);
   }
 }
+@keyframes translateBoneMobile {
+  from {
+    opacity: 0;
+    transform: translateY(-100px) rotate(15deg);
+  }
+  40% {
+    opacity: 1;
+  }
+  70% {
+    transform: translateY(-30px) rotate(15deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+@keyframes translateBone2Mobile {
+  from {
+    opacity: 0;
+    transform: translateY(-100px) rotate(-22deg);
+  }
+  40% {
+    opacity: 1;
+  }
+  70% {
+    transform: translateY(-30px) rotate(-22deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px) rotate(0deg);
+  }
+}
 .works {
   display: flex;
   flex-direction: column;
@@ -235,4 +267,142 @@
 .works__item:last-child .works__bone {
   transform: rotate(98deg);
   filter: drop-shadow(-1px -10px 0px #333333);
+}
+
+@media screen and (max-width: 1200px) and (min-width: 640px) {
+  .works__item:first-child {
+    align-self: flex-start;
+  }
+  .works__item:first-child .works__container-image {
+    padding: 40px;
+    transform: rotate(-10deg);
+    left: 20px;
+    top: 45px;
+  }
+  .works__item:first-child .works__bone {
+    transform: rotate(45deg);
+    width: 190px;
+    height: 230px;
+    filter: drop-shadow(-7px 1px 0px #333333);
+  }
+  .works__item:first-child .works__container-bone {
+    right: 72px;
+    top: -60px;
+  }
+  .works__item:first-child h3 {
+    transform: rotate(-15deg);
+    font-size: 18px;
+    top: 103px;
+    right: 35px;
+    line-height: 120%;
+  }
+  .works__item.animation:first-child .works__container-bone {
+    animation-name: translateBoneMobile;
+  }
+  .works__container-image .works__image {
+    width: 208px;
+    height: 216px;
+  }
+  .works__item:nth-child(2) {
+    align-self: flex-end;
+    top: 0;
+  }
+  .works__item:nth-child(2) .works__image {
+    width: 206px;
+    height: 424px;
+    left: -35px;
+    transform: rotate(10deg);
+  }
+  .works__item:nth-child(2) h3 {
+    font-size: 18px;
+    line-height: 120%;
+    transform: rotate(22deg);
+    top: 105px;
+    right: 30px;
+  }
+  .works__item:nth-child(2) .works__bone {
+    width: 190px;
+    height: 230px;
+    transform: rotate(80.58deg);
+    filter: drop-shadow(-7px 1px 0px #333333);
+  }
+  .works__item:nth-child(2) .works__container-bone {
+    left: 9px;
+  }
+  .works__item.animation:nth-child(2) .works__container-bone {
+    animation-name: translateBone2Mobile;
+  }
+  .works__item:last-child {
+    align-self: flex-start;
+    top: -135px;
+  }
+  .works__item:last-child .works__image {
+    transform: rotate(-10deg);
+    width: 206px;
+    height: 424px;
+    right: -35px;
+  }
+  .works__item:last-child .works__bone {
+    width: 190px;
+    height: 230px;
+    transform: rotate(45deg);
+    filter: drop-shadow(-7px 1px 0px #333333);
+  }
+  .works__item:last-child h3 {
+    font-size: 18px;
+    line-height: 120%;
+    transform: rotate(-15deg);
+    top: 105px;
+    right: 20px;
+  }
+  .works__item:last-child .works__container-bone {
+    left: 20px;
+  }
+  .works__item.animation:last-child .works__container-bone {
+    animation-name: translateBoneMobile;
+  }
+  .works__track img {
+    width: 110.73px;
+    height: 95.99px;
+  }
+  .works__track:first-child {
+    left: -333px;
+    transform: rotate(121.09deg);
+    top: 250px;
+  }
+  .works__track:nth-child(2) {
+    left: -164px;
+    top: 275px;
+    transform: rotate(149.09deg);
+  }
+  .works__track:nth-child(3) {
+    left: -235px;
+    top: 439px;
+    transform: rotate(-172.89deg);
+  }
+  .works__track:nth-child(4) {
+    left: -267px;
+    top: 557px;
+    transform: rotate(-138.46deg);
+  }
+  .works__track:nth-child(5) {
+    left: -424px;
+    top: 574px;
+    transform: rotate(-128.22deg);
+  }
+  .works__track:nth-child(6) {
+    left: -442px;
+    top: 751px;
+    transform: rotate(-138.46deg);
+  }
+  .works__track:nth-child(7) {
+    left: -580px;
+    top: 786px;
+    transform: rotate(-138.46deg);
+  }
+  .works__track:nth-child(8) {
+    left: -527px;
+    top: 920px;
+    transform: rotate(-138.46deg);
+  }
 }

@@ -261,6 +261,7 @@
   display: none;
   padding: 17px;
   margin-right: 24px;
+  position: relative;
 }
 .leashes__item:nth-child(3n) {
   margin-right: 0;
@@ -401,4 +402,108 @@
 }
 .leashes__control.deactivate:hover {
   opacity: 0.5;
+}
+@media screen and (max-width: 1200px) and (min-width: 640px) {
+  .catalog__trackers {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+  .trackers__info {
+    position: static;
+    order: 1;
+    width: 100%;
+    height: auto;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e969a0;
+    margin-bottom: 0;
+  }
+  .trackers__title {
+    font-size: 18px;
+    line-height: 135%;
+    color: #e969a0;
+    -webkit-text-stroke: 0.5px #000000;
+  }
+  .trackers__list {
+    order: 2;
+    overflow-x: scroll;
+    width: 100%;
+    padding-top: 30px;
+  }
+  .trackers__control-container {
+    display: none;
+  }
+  .trackers__item:first-child,
+  .trackers__item:nth-child(4) {
+    margin-right: 20px;
+  }
+  .trackers__item:nth-child(3n) {
+    margin-right: 20px;
+  }
+  .trackers__item:last-child {
+    margin-right: 0;
+  }
+  .trackers__item:first-child.trackers__item--active,
+  .trackers__item:nth-child(4).trackers__item--active {
+    margin-right: 20px;
+  }
+  .trackers__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+    min-width: 276px;
+    height: 352px;
+  }
+  .catalog__leashes {
+    display: flex;
+    flex-direction: column;
+  }
+  .leashes__info {
+    position: static;
+    order: 1;
+    width: 100%;
+    height: auto;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e969a0;
+    margin-bottom: 0px;
+  }
+  .leashes__title {
+    font-size: 18px;
+    line-height: 135%;
+    color: #e969a0;
+    -webkit-text-stroke: 0.5px #000000;
+  }
+  .leashes__list {
+    order: 2;
+    overflow-x: scroll;
+    width: 100%;
+    padding-top: 30px;
+  }
+  .leashes__control-container {
+    display: none;
+  }
+  .leashes__item:first-child,
+  .leashes__item:nth-child(4) {
+    margin-right: 20px;
+  }
+  .leashes__item:nth-child(3n) {
+    margin-right: 20px;
+  }
+  .leashes__item:last-child {
+    margin-right: 0;
+  }
+  .leashes__item:nth-child(6).leashes__item--active,
+  .leashes__item:nth-child(3).leashes__item--active {
+    margin-right: 20px;
+  }
+  .leashes__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+    min-width: 276px;
+    height: 352px;
+    position: relative;
+  }
 }

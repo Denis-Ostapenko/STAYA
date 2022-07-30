@@ -73,3 +73,54 @@
   background: none;
   color: #cef564;
 }
+.header__menu {
+  display: none;
+}
+@media screen and (max-width: 1200px) and (min-width: 640px) {
+  .header {
+    width: 640px;
+    position: relative;
+  }
+  .header__container {
+    width: 100%;
+    height: 68px;
+  }
+  .header__logo img {
+    width: 115px;
+  }
+  .header__buy {
+    display: none;
+  }
+  .header__menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 26px;
+    height: 16px;
+    cursor: pointer;
+  }
+  .header__nav {
+    display: none;
+  }
+  .header__nav--active {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 68px;
+    right: 0;
+    left: 0;
+    background-color: #6c2df8;
+    align-items: flex-start;
+  }
+  .header__nav--active a {
+    width: 100%;
+    margin: 0 20px;
+    padding: 20px 0px;
+    border-bottom: 1px solid rgb(233 105 160 / 60%);
+  }
+
+  .header__menu > span {
+    outline: 1px solid #ffffff;
+    width: 100%;
+  }
+}

@@ -121,3 +121,26 @@
   line-height: 135%;
   color: #ffffff;
 }
+@media screen and (max-width: 1200px) and (min-width: 640px) {
+  .rewiews__item {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .rewiews__rating {
+    order: 1;
+    width: auto;
+  }
+  .rewiews__image img {
+    margin-right: 40px;
+  }
+  .rewiews__item:first-child .rewiews__image img {
+    transform: rotate(15deg);
+  }
+  .rewiews__body {
+    order: 3;
+  }
+  .rewiews__image {
+    order: 2;
+  }
+}

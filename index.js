@@ -60,7 +60,7 @@ const animationNextName = "catalogItemOpacityRight";
 const animationPrevName = "catalogItemOpacityLeft";
 
 class СarouselManager {
-    constructor(navNode, controlSelector, сarouselItemSelector, scrollingItems = 3) {
+    constructor(navNode, controlSelector, сarouselItemSelector, scrollingItems = 3, firstActiveElement = 1) {
         this.сarouselArr = [];
         this.сarouselActivItems = [];
         this.control_prev = null;
@@ -68,6 +68,7 @@ class СarouselManager {
         this.scrollingItems = scrollingItems;
         this.controlSelector = controlSelector;
         this.сarouselItemSelector = сarouselItemSelector;
+        this.firstActiveElement = firstActiveElement;
         this.initFromHtml(navNode);
     }
 
@@ -78,15 +79,24 @@ class СarouselManager {
         for (var i = 0; i < сarouselItems.length; i++) {
             this.registerCarouselItem(сarouselItems[i], i);
         }
+        this.сarouselActivItems = [this.firstActiveElement - 1, this.firstActiveElement - 1 + this.scrollingItems - 1];
+        this.сarouselArr.forEach((element, index) => {
+            if (index >= this.сarouselActivItems[0] && index <= this.сarouselActivItems[1]) {
+                // if (element.carouselItem.className.indexOf(ActiveCarouselItem) === -1) {
+                //     element.setActive(true)
+                // }
+                element.setActive(true)
+            } else {
+                element.setActive(false)
+            }
+
+        })
         this.onActivate(control_prev)
         this.onActivate(control_next)
     }
     registerCarouselItem(сarouselItem, i) {
         const item = new CarouselItem(сarouselItem, this.сarouselItemSelector + ActiveCarouselItem);
         this.сarouselArr.push(item);
-        if (сarouselItem.className.indexOf(ActiveCarouselItem) !== -1) {
-            this.сarouselActivItems.push(i)
-        }
     }
     onActivate(control) {
         const controls = new ControlItem(control, 'deactivate')
@@ -102,51 +112,37 @@ class СarouselManager {
 
     onPrev() {
         if (this.сarouselActivItems[0] !== 0) {
-            const countActive = [this.сarouselActivItems[0] - this.scrollingItems,
-            this.сarouselActivItems[0]]
-            const newArrActive = this.сarouselArr.slice(countActive[0], countActive[1])
-            this.сarouselArr.forEach((element, index) => {
-                if (this.сarouselActivItems.indexOf(index) !== -1) {
-                    element.setActive(false)
-                }
-            })
-            this.сarouselActivItems = [countActive[0], countActive[0] + 1, countActive[0] + 2];
+            const newArrActive = this.сarouselArr.slice(this.сarouselActivItems[0] - this.scrollingItems, this.сarouselActivItems[0])
+            this.сarouselArr.forEach(element => element.setActive(false))
+            this.сarouselActivItems = [this.сarouselActivItems[0] - this.scrollingItems, this.сarouselActivItems[0] - 1];
             newArrActive.forEach((element) => {
                 element.setActive(true);
                 element.carouselItem.style.animationName = animationPrevName;
             })
         }
-        if (this.сarouselActivItems[0] !== 0) {
-            this.control_prev.setActive(false)
-            this.control_next.setActive(false)
-        }
         if (this.сarouselActivItems[0] === 0) {
             this.control_prev.setActive(true)
+            this.control_next.setActive(false)
+        } else {
+            this.control_prev.setActive(false)
             this.control_next.setActive(false)
         }
     }
     onNext() {
-        if (this.сarouselActivItems[this.сarouselActivItems.length - 1] !== this.сarouselArr.length - 1) {
-            const countActive = [this.сarouselActivItems[this.сarouselActivItems.length - 1],
-            this.сarouselActivItems[this.сarouselActivItems.length - 1] + this.scrollingItems];
-            const newArrActive = this.сarouselArr.slice(countActive[0] + 1, countActive[1] + 1)
-            this.сarouselArr.forEach((element, index) => {
-                if (this.сarouselActivItems.indexOf(index) !== -1) {
-                    element.setActive(false)
-                }
-            })
-            this.сarouselActivItems = [countActive[0] + 1, countActive[0] + 2, countActive[0] + 3];
+        if (this.сarouselActivItems[1] !== this.сarouselArr.length - 1) {
+            const newArrActive = this.сarouselArr.slice(this.сarouselActivItems[1] + 1,
+                this.сarouselActivItems[1] + 1 + this.scrollingItems);
+            this.сarouselArr.forEach(element => element.setActive(false))
+            this.сarouselActivItems = [this.сarouselActivItems[1] + 1, this.сarouselActivItems[1] + this.scrollingItems];
             newArrActive.forEach((element) => {
                 element.setActive(true)
-                console.log(element.carouselItem)
                 element.carouselItem.style.animationName = animationNextName;
             })
         }
-        if (this.сarouselActivItems[this.сarouselActivItems.length - 1] !== this.сarouselArr.length - 1) {
-            this.control_next.setActive(false)
+        if (this.сarouselActivItems[1] === this.сarouselArr.length - 1) {
+            this.control_next.setActive(true)
             this.control_prev.setActive(false)
-        }
-        if (this.сarouselActivItems[this.сarouselActivItems.length - 1] === this.сarouselArr.length - 1) {
+        } else {
             this.control_next.setActive(true)
             this.control_prev.setActive(false)
         }
@@ -156,18 +152,18 @@ class СarouselManager {
 const ActiveCarouselItem = '--active';
 
 class ControlItem {
-    constructor(carouselItem, classDeactivate) {
-        this.carouselItem = carouselItem;
+    constructor(controlItem, classDeactivate) {
+        this.controlItem = controlItem;
         this.classDeactivate = classDeactivate;
     }
     onActive(action) {
-        this.carouselItem.addEventListener('click', (event) => {
+        this.controlItem.addEventListener('click', (event) => {
             event.preventDefault()
             action(this)
         });
     }
     setActive(value) {
-        this.carouselItem.classList.toggle(this.classDeactivate, value);
+        this.controlItem.classList.toggle(this.classDeactivate, value);
     }
 }
 
@@ -182,17 +178,29 @@ class CarouselItem {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    new СarouselManager(document.querySelector('.catalog'), 'leashes__control', 'leashes__item');
-    new СarouselManager(document.querySelector('.catalog'), 'trackers__control', 'trackers__item');
+    new СarouselManager(document.querySelector('.faq'), 'faq__control', 'faq__item', 4, 1);
+})
+document.addEventListener('DOMContentLoaded', () => {
+    new СarouselManager(document.querySelector('.catalog'), 'leashes__control', 'leashes__item', 3, 1);
+    new СarouselManager(document.querySelector('.catalog'), 'trackers__control', 'trackers__item', 3, 4);
 })
 
 const acc = document.querySelector(".faq").querySelector(".faq__list");
-const question = acc.querySelectorAll(".faq__question");
-const answer = acc.querySelectorAll(".faq__answer");
-for (let i = 0; i < question.length; i++) {
-    question[i].addEventListener("click", function () {
+const faqcontrols = document.querySelector(".faq").querySelectorAll(".faq__control");
+const questions = acc.querySelectorAll(".faq__question");
+const answers = acc.querySelectorAll(".faq__answer");
+for (let i = 0; i < questions.length; i++) {
+    questions[i].addEventListener("click", function () {
         this.classList.toggle("faq__question--active");
-        answer[i].classList.toggle("faq__answer--active");
+        answers[i].classList.toggle("faq__answer--active");
+    });
+}
+for (let i = 0; i < faqcontrols.length; i++) {
+    faqcontrols[i].addEventListener("click", function () {
+        if (faqcontrols[i].className.indexOf("deactivate") === -1) {
+            answers.forEach(element => element.classList.toggle("faq__answer--active", false))
+            questions.forEach(element => element.classList.toggle("faq__question--active", false))
+        }
     });
 }
 // функция всего лишь добавляет CSS-класс, который и осуществляет анимацию
@@ -247,3 +255,31 @@ const faqItem = document.querySelectorAll('.faq__item');
 faqItem.forEach((content) => {
     observer.observe(content);
 });
+const headerMenu = document.querySelector('.header__menu');
+const headerNav = document.querySelector('.header__nav');
+const headerlinks = headerNav.querySelectorAll('a')
+document.addEventListener('DOMContentLoaded', () => {
+    headerMenu.addEventListener("click", (event) => {
+        event.preventDefault()
+        headerNav.classList.toggle("header__nav--active")
+    })
+    headerlinks.forEach(element => {
+        element.addEventListener("click", () => {
+            headerNav.classList.remove("header__nav--active")
+        })
+    })
+})
+
+
+const footerForm = document.querySelector('.footer__form')
+const formSubmit = footerForm.querySelector('.form__submit');
+const formFirstName = footerForm.querySelector('.form__first-name');
+const formName = footerForm.querySelector('.form__name');
+const formEmail = footerForm.querySelector('.form__e-mail');
+const formTextarea = footerForm.querySelector('textarea');
+formSubmit.addEventListener("click", (event) => {
+    event.preventDefault()
+    if (formFirstName.value !== '' && formName.value !== '' && formEmail.value !== '' && formTextarea.value !== '') {
+        formSubmit.style.backgroundImage = "url('../img/check.svg')";
+    }
+})
