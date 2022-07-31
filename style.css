@@ -96,6 +96,7 @@ html::-webkit-scrollbar {
 }
 body > * {
   width: 1200px;
+  overflow-x: hidden;
 }
 @media screen and (max-device-width: 1199px) {
   body > * {
