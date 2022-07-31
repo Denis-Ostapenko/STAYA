@@ -398,7 +398,7 @@
   transform: rotate(125.17deg);
   animation-duration: 2200ms;
 }
-@media screen and (max-width: 1200px) and (min-width: 640px) {
+@media screen and (max-device-width: 1199px) {
   .сover__image:first-child,
   .сover__image:last-child {
     display: none;
@@ -422,5 +422,29 @@
   .сover__button {
     width: 254px;
     height: 45px;
+  }
+}
+@media screen and (max-device-width: 639px) {
+  .сover__images-list li:nth-child(3) {
+    display: none;
+  }
+  .сover__image {
+    height: 382px;
+    width: 340px;
+    border-radius: 10px;
+  }
+  .сover__track-list {
+    display: none;
+  }
+  .сover__title {
+    font-size: 28px;
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    margin: 20px 0 20px;
+  }
+  .сover__button {
+    height: 42px;
+    width: 234px;
+    box-shadow: 6px 6px 0 0 #333333;
   }
 }

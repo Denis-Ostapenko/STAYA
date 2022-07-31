@@ -18,7 +18,7 @@
 .main__faq {
   padding-bottom: 40px;
 }
-@media screen and (max-width: 1200px) and (min-width: 640px) {
+@media screen and (max-device-width: 1199px) {
   .main__сover {
     margin-top: 18px;
   }
@@ -36,5 +36,25 @@
   }
   .main__faq {
     padding-bottom: 180px;
+  }
+}
+@media screen and (max-device-width: 639px) {
+  .main__сover {
+    margin-top: 10px;
+  }
+  .main__about {
+    padding-top: 50px;
+  }
+  .main__works {
+    padding-top: 50px;
+  }
+  .main__catalog {
+    padding-top: 50px;
+  }
+  .main__rewiews {
+    padding-top: 50px;
+  }
+  .main__faq {
+    padding-bottom: 55px;
   }
 }

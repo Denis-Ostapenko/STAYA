@@ -56,8 +56,8 @@ document.addEventListener('DOMContentLoaded', () => {
     new TabsManager(document.querySelector('.about'));
 })
 
-const animationNextName = "catalogItemOpacityRight";
-const animationPrevName = "catalogItemOpacityLeft";
+const animationNextName = "сarouselRight";
+const animationPrevName = "сarouselLeft";
 
 class СarouselManager {
     constructor(navNode, controlSelector, сarouselItemSelector, scrollingItems = 3, firstActiveElement = 1) {
@@ -143,7 +143,7 @@ class СarouselManager {
             this.control_next.setActive(true)
             this.control_prev.setActive(false)
         } else {
-            this.control_next.setActive(true)
+            this.control_next.setActive(false)
             this.control_prev.setActive(false)
         }
     }
@@ -178,11 +178,10 @@ class CarouselItem {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    new СarouselManager(document.querySelector('.faq'), 'faq__control', 'faq__item', 4, 1);
-})
-document.addEventListener('DOMContentLoaded', () => {
     new СarouselManager(document.querySelector('.catalog'), 'leashes__control', 'leashes__item', 3, 1);
     new СarouselManager(document.querySelector('.catalog'), 'trackers__control', 'trackers__item', 3, 4);
+    new СarouselManager(document.querySelector('.faq'), 'faq__control', 'faq__item', 4, 1);
+    new СarouselManager(document.querySelector('.rewiews'), 'rewiews__control', 'rewiews__item', 1, 1);
 })
 
 const acc = document.querySelector(".faq").querySelector(".faq__list");

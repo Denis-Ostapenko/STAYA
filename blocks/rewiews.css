@@ -121,7 +121,7 @@
   line-height: 135%;
   color: #ffffff;
 }
-@media screen and (max-width: 1200px) and (min-width: 640px) {
+@media screen and (max-device-width: 1199px) {
   .rewiews__item {
     display: flex;
     justify-content: space-between;
@@ -142,5 +142,106 @@
   }
   .rewiews__image {
     order: 2;
+  }
+}
+@media screen and (max-device-width: 639px) {
+  .rewiews__title {
+    font-size: 22px;
+    line-height: 26px;
+    margin-bottom: 25px;
+  }
+  .rewiews__image {
+    display: none;
+  }
+  .rewiews__star-list {
+    margin-bottom: 10px;
+  }
+  .rewiews__star-item img {
+    width: 22px;
+    height: 22px;
+  }
+  .rewiews__body {
+    width: 100%;
+  }
+  .rewiews__body-title {
+    margin-bottom: 7px;
+  }
+  .rewiews__body-text {
+    font-size: 14px;
+    line-height: 135%;
+  }
+  .rewiews__item {
+    margin-bottom: 0px;
+  }
+  .rewiews__controls {
+    display: flex;
+    height: 35px;
+    width: 100%;
+    border: 3px solid #cef564;
+    border-radius: 28px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+  .rewiews__list {
+    margin-bottom: 20px;
+  }
+  .rewiews__control {
+    height: 22px;
+    width: 24px;
+    transition: opacity 250ms;
+  }
+  .rewiews__control.prev {
+    background: url("../img/arrow.svg") 100% 100% / cover no-repeat;
+  }
+  .rewiews__control.next {
+    transform: rotate(180deg);
+    margin-top: 1px;
+    background: url("../img/arrow.svg") 100% 100% / cover no-repeat;
+  }
+  .rewiews__control:hover {
+    opacity: 0.8;
+    transition: opacity 250ms;
+  }
+  .rewiews__control.deactivate {
+    opacity: 0.5;
+    background: url("../img/arrow.svg") 100% 100% / cover no-repeat;
+    cursor: default;
+  }
+  .rewiews__control.deactivate:hover {
+    opacity: 0.5;
+  }
+  .rewiews__item {
+    display: none;
+  }
+  .rewiews__item--active {
+    display: flex;
+    animation-name: сarouselLeft;
+    animation-delay: 0ms;
+    animation-timing-function: ease-out;
+    animation-duration: 400ms;
+    animation-fill-mode: forwards;
+  }
+  .rewiews__item.animation .rewiews__rating {
+    animation-name: inherit;
+    animation-delay: 0ms;
+    animation-timing-function: ease-out;
+    animation-duration: 400ms;
+    animation-fill-mode: forwards;
+  }
+  .rewiews__item.animation .rewiews__body {
+    animation-name: inherit;
+    animation-delay: 0ms;
+    animation-timing-function: ease-out;
+    animation-duration: 400ms;
+    animation-fill-mode: forwards;
+  }
+  .rewiews__item.animation .rewiews__image {
+    animation-name: inherit;
+    animation-delay: 0ms;
+    animation-timing-function: ease-out;
+    animation-duration: 400ms;
+    animation-fill-mode: forwards;
   }
 }

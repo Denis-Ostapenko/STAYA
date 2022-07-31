@@ -403,7 +403,7 @@
 .leashes__control.deactivate:hover {
   opacity: 0.5;
 }
-@media screen and (max-width: 1200px) and (min-width: 640px) {
+@media screen and (max-device-width: 1199px) {
   .catalog__trackers {
     display: flex;
     flex-direction: column;
@@ -505,5 +505,27 @@
     min-width: 276px;
     height: 352px;
     position: relative;
+  }
+}
+@media screen and (max-device-width: 639px) {
+  .catalog h2 {
+    font-size: 22px;
+    line-height: 26px;
+    margin-bottom: 25px;
+  }
+  .catalog__trackers {
+    margin-bottom: 25px;
+  }
+  .trackers__info {
+    padding-bottom: 10px;
+  }
+  .trackers__list {
+    padding-top: 20px;
+  }
+  .leashes__info {
+    padding-bottom: 10px;
+  }
+  .leashes__list {
+    padding-top: 20px;
   }
 }

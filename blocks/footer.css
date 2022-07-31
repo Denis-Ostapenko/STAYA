@@ -184,7 +184,7 @@
   z-index: 30;
   position: absolute;
 }
-@media screen and (max-width: 1200px) and (min-width: 640px) {
+@media screen and (max-device-width: 1199px) {
   .footer {
     padding: 80px 0;
   }
@@ -244,5 +244,96 @@
     width: 230px;
     margin-right: 70px;
     margin-left: auto;
+  }
+}
+@media screen and (max-device-width: 639px) {
+  .footer__container {
+    width: 360px;
+    padding: 0 10px;
+  }
+  .footer__form {
+    margin-bottom: 35px;
+  }
+  .footer__logo {
+    width: 95px;
+    height: 23px;
+    top: -40px;
+  }
+  .footer {
+    border-radius: 48px 48px 0px 0px;
+    padding: 80px 0px 40px;
+  }
+  .form-title {
+    margin-left: 0;
+    margin-bottom: 15px;
+  }
+  .form-title h2 {
+    font-size: 22px;
+    line-height: 135%;
+    margin-bottom: 5px;
+  }
+  .form-title p {
+    font-size: 14px;
+    line-height: 135%;
+  }
+  .form__contsiner-name {
+    flex-direction: column;
+    margin-bottom: 0px;
+  }
+  .form__contsiner-name input {
+    width: 100%;
+    font-size: 14px;
+    line-height: 135%;
+    height: 35px;
+  }
+  .form__first-name {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  .form__name {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  .form__e-mail {
+    width: 100%;
+    font-size: 14px;
+    line-height: 135%;
+    height: 35px;
+    margin-bottom: 10px;
+  }
+  .form__textarea {
+    height: 90px;
+    border-radius: 18px;
+    font-size: 14px;
+    line-height: 135%;
+    padding: 8px 78px 8px 10px;
+  }
+  .form__submit {
+    width: 68px;
+    height: 90px;
+    border-radius: 18px;
+    background-size: 25px 20px;
+  }
+  .footer__nav {
+    margin-bottom: 0px;
+  }
+  .footer__nav button {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 8px;
+  }
+  .footer__info {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .footer__contact {
+    width: 50%;
+    margin: 0;
+  }
+  .footer__contact h3,
+  .footer__contact a,
+  .footer__contact span {
+    font-size: 14px;
+    line-height: 20px;
   }
 }
