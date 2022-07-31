@@ -280,6 +280,6 @@ const formTextarea = footerForm.querySelector('textarea');
 formSubmit.addEventListener("click", (event) => {
     event.preventDefault()
     if (formFirstName.value !== '' && formName.value !== '' && formEmail.value !== '' && formTextarea.value !== '') {
-        formSubmit.style.backgroundImage = "url('../img/check.svg')";
+        formSubmit.style.backgroundImage = "url('./img/check.svg')";
     }
 })
