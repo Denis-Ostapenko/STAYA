@@ -447,6 +447,13 @@
   .trackers__item:nth-child(4).trackers__item--active {
     margin-right: 20px;
   }
+  .trackers__list.animation .trackers__item:first-child.trackers__item,
+  .trackers__list.animation .trackers__item:nth-child(2).trackers__item,
+  .trackers__list.animation .trackers__item:nth-child(3).trackers__item {
+    animation-name: catalogItemOpacityLeft;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+  }
   .trackers__item {
     display: flex;
     flex-direction: column;
