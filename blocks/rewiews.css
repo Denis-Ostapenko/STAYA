@@ -186,6 +186,7 @@
   }
   .rewiews__list {
     margin-bottom: 20px;
+    overflow-x: hidden;
   }
   .rewiews__control {
     height: 22px;
