@@ -441,8 +441,10 @@
     line-height: 120%;
     letter-spacing: -0.03em;
     margin: 20px 0 20px;
+    animation-delay: 0s;
   }
   .сover__button {
+    animation-delay: 0.2s;
     height: 42px;
     width: 234px;
     box-shadow: 6px 6px 0 0 #333333;
