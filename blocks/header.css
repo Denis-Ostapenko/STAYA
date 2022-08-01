@@ -81,6 +81,7 @@
     width: 640px;
     background: none;
     position: relative;
+    overflow: visible;
   }
   .header__container {
     width: 100%;
@@ -129,6 +130,7 @@
   .header {
     width: 360px;
     position: relative;
+    overflow: visible;
   }
   .header__container {
     width: 100%;
