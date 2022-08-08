@@ -202,7 +202,7 @@
     background: url("../img/arrow.svg") 100% 100% / cover no-repeat;
   }
   .rewiews__control:hover {
-    opacity: 0.8;
+    opacity: 1;
     transition: opacity 250ms;
   }
   .rewiews__control.deactivate {

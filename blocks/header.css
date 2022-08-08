@@ -137,7 +137,7 @@
     height: 38px;
   }
   .header__logo img {
-    width: 71px;
+    width: 84px;
   }
   .header__nav--active {
     top: 38px;
@@ -147,5 +147,12 @@
     margin: 0 10px;
     padding: 10px 0px;
     border-bottom: 1px solid rgb(233 105 160 / 60%);
+  }
+  .header__nav a {
+    font-size: 14px;
+  }
+  .header__menu {
+    width: 22px;
+    height: 14px;
   }
 }

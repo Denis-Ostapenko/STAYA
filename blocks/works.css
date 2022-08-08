@@ -453,7 +453,7 @@
   }
   .works__item:nth-child(2) .works__container-bone {
     left: -30px;
-    top: -73px;
+    top: -75px;
   }
   .works__item:last-child {
     top: -80px;
@@ -472,7 +472,7 @@
     font-size: 12px;
     line-height: 14px;
     top: 67px;
-    right: 20px;
+    right: 10px;
   }
   .works__item:last-child .works__container-bone {
     top: -79px;
